@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/TestStyle.css">
+    <link rel="stylesheet" href="styles/Base.css">
+    <title>Main Page</title>
+</head>
+<body>
+    <div class="flexdisplay">
+    <!-- Верхнее меню -->
+        <header class="header">
+            <a href="index.html"><img src="sources/logo.png" class="header-logo"></a>
+            <input type="checkbox" id="burger">
+            <label for="burger"></label>
+            <nav class="header-menu">
+                <a href="InformationAboutAuthor.html" class="header-menu-links"> Об авторе </a>
+                <a href="SchoolInformation.html" class="header-menu-links"> О школе </a>
+                <a href="Test.html" class="header-menu-links"> Тест </a>
+            </nav>
+        </header>
+        <div class="line"></div>
+        <h2 align="center">Пройдите тест, что бы узнать, насколько хорошо вы знаете нашу школу:</h2>
+        <br>
+        <br>
+        <h3 align="center">В каком году была основана школа?</h3>
+        <br>
+        <div class="dots">
+            <button class="dot" id="btn11"></button>
+            <div class="Text">1990</div>
+            <button class="dot" id="btn12"></button>
+            <div class="Text">1997</div>
+            <button class="dot" id="btn13"></button>
+            <div class="Text">2003</div>
+            <button class="dot" id="btn14"></button>
+            <div class="Text">1987</div>
+        </div>
+        <h3 align="center">Как зовут директора школы?</h3>
+        <br>
+        <div class="dots">
+            <button class="dot" id="btn21"></button>
+            <div class="Text">Смирнов <br> Давид <br> Александрович</div>
+            <button class="dot" id="btn22"></button>
+            <div class="Text">Щукина <br> Мария <br> Артемьевна</div>
+            <button class="dot" id="btn23"></button>
+            <div class="Text">Колмагорова <br> Юлия <br> Михайловна</div>
+            <button class="dot" id="btn24"></button>
+            <div class="Text">Николаев <br> Алексей <br> Кириллович</div>
+        </div>
+        <h3 align="center">Сколько профильных направлений в школе?</h3>
+        <br>
+        <div class="dots">
+            <button class="dot" id="btn31"></button>
+            <div class="Text">5</div>
+            <button class="dot" id="btn32"></button>
+            <div class="Text">3</div>
+            <button class="dot" id="btn33"></button>
+            <div class="Text">4</div>
+            <button class="dot" id="btn34"></button>
+            <div class="Text">В школе нет профильных направлений</div>
+        </div>
+        <h3 align="center">Какой процент учеников поступил в ВУЗ в 2022 году?</h3>
+        <br>
+        <div class="dots">
+            <button class="dot" id="btn41"></button>
+            <div class="Text">100%</div>
+            <button class="dot" id="btn42"></button>
+            <div class="Text">30%</div>
+            <button class="dot" id="btn43"></button>
+            <div class="Text">91%</div>
+            <button class="dot" id="btn44"></button>
+            <div class="Text">86%</div>
+        </div>
+        <button class="resultbutton" id="result"><h3>Узнать Результат</h3></button>
+        <div align="center" id="res"></div>
+        <div class="line"></div>
+        <footer class="footer">
+            <div class="footer-blocks">
+                <h4 class="footer-blocks-text">Телефон</h4>
+                <h3>8 (3852) 20-60-80</h3>
+            </div>
+            <div class="footer-blocks">
+                <h4 class="footer-blocks-text">Факс</h4>
+                <h3>8 (3852) 20-60-80</h3>
+            </div>
+            <div class="footer-blocks">
+                <h4 class="footer-blocks-text">E-mail</h4>
+                <h3>mbou.gym123@barnaul-obr.ru</h3>
+            </div>
+        </footer>
+    </div>
+    <script src="scripts/test.js"></script>
+</body>
+</html>

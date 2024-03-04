@@ -1,0 +1,321 @@
+@font-face {
+    font-family: 'Gotham';
+    src: url(../sources/fonts/gotham_book.otf);
+}
+.flexdisplay {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+/* Верхнее меню */
+.header {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+.header-logo {
+    width: 50%;
+    height: 90%;
+    margin-left: 20%;
+}
+.header-menu {
+    width: 80%;
+    margin-left: 20%;
+    margin-top: 2%;
+    position: absolute;
+}
+.header-menu-links {
+    font-family: 'Gotham';
+    margin-left: 4%;
+    font-size: 120%;
+    position: relative;
+    text-decoration: none;
+    
+}
+.header-menu-links::after { 
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 10%;
+    width: 0;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+.header-menu-links:hover::after { 
+    width: 100%; 
+    left: 0; 
+}
+/* Бургер-меню */
+#burger, [for=burger] {
+    display: none;
+}
+@media screen and (max-width: 1300px) {
+    .header-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        margin-top: 30px;
+        background: #FFFFFF;
+        opacity: 0.8;
+        width: 80%;
+        user-select: none;
+    }       
+    [for=burger] {
+        display: block;
+        position: fixed;
+        width: 10vw;
+        text-align: center;
+        right: 20px;
+        top: 10px;
+    }
+    [for=burger]::before {
+        content: '☰';
+        font-size: 20pt;
+    }
+    .header-menu-links {
+        display: flex;
+        flex-direction: column;
+        font-size: 20pt;
+    }
+    #burger:checked + label + nav{
+        display: block;
+    }
+    .header-menu-links::after { 
+        background: none;
+    }
+}
+/* Линия */
+.line {
+    margin-top: 1.5%;
+    width: 80%;
+    height: 0.5vh;
+    margin-left: 10%;
+    border-top: 1px solid white;
+}
+/* Тело страницы */
+.main {
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+}
+/* 1 блок */
+.main-aside-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.main-aside-1-firstblock {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+.main-aside-1-firstblock-school {
+    width: 43vh;
+    border-radius: 4%;
+}
+.main-aside-1-line {
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 0.5%;
+    height: 30vh;
+    border-left: 2px solid white;
+}
+@media (max-width: 1094px) {
+    .main-aside-1-line {
+        height: 0vh;
+    }
+}
+.main-aside-1-secondblock {
+    width: fit-content;
+    margin-left: 2%;
+}
+.main-aside-1-secondblock-text {
+    color: #8685EF;
+}
+/* 2 блок */
+.main-aside-2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    flex-wrap: wrap;
+}
+.main-aside-2 div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    align-items: center;
+
+}
+.main-aside-2 div h3 {
+    color: black;
+    text-align: center;
+    font-size: 20px;
+}
+.main-aside-2-firstblock {
+    border-radius: 1em;
+    width: 36vh;
+    margin: 2% 2%;
+    height: 13vh;
+}
+.main-aside-2-secondblock {
+    border-radius: 1em;
+    width: 36vh;
+    margin: 2% 2%;
+}
+.main-aside-2-thirdblock {
+    border-radius: 1em;
+    width: 36vh;
+    margin: 2% 2%;
+}
+/* 3 блок */
+.main-aside-3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    flex-wrap: wrap;
+}
+.main-aside-3-firstblock {
+    border-radius: 1em;
+    width: 36vh;
+    margin: 0 2%;
+}
+.main-aside-3-secondblock {
+    border-radius: 1em;
+    width: 36vh;
+    margin: 0 2%;
+}
+.main-aside-3-thirdblock {
+    border-radius: 1em;
+    width: 36vh;
+    margin: 0 2%;
+}
+.main-aside-3-firstblock-text {
+font-size: 40pt;
+color: #8685EF;
+}
+.main-aside-3-secondblock-text {
+font-size: 40pt;
+color: #8685EF;
+}
+.main-aside-3-thirdblock-text {
+font-size: 40pt;
+color: #8685EF;
+}
+.main-aside-3-firstblock-text-2 {
+    color: #8685EF;
+    margin-top: -10%;
+}
+.main-aside-3-secondblock-text-2 {
+    margin-top: -10%;
+    color: #8685EF;
+}
+.main-aside-3-thirdblock-text-2 {
+    margin-top: -10%;
+    color: #8685EF
+}
+/* 4 блок */
+.main-aside-4 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    flex-wrap: wrap;
+}
+.main-aside-4-firstblock {
+    display: flex;
+    justify-content: center;
+    width: 40vh;
+}
+.main-aside-4-firstblock-director {
+    width: 35vh;
+    border-radius: 1em;
+}
+.main-aside-4-secondblock {
+    width: fit-content;
+    height: fit-content;
+}
+.main-aside-4-secondblock-text {
+    color: #8685EF;
+
+}
+
+/* Слайдер */
+
+.main-aside-5 {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    padding: 0 5%;
+} 
+.main-aside-5-slider {
+    width: 1037px;
+    overflow: hidden;
+}
+.main-aside-5-slider-line {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    left: 0px;
+    transition: all ease 1s;
+}
+.main-aside-5-img {
+    width: 330px;
+    border-radius: 1em;
+}
+.main-aside-5-text {
+    font-size: 30pt;
+    color: rgb(180, 180, 180);
+}
+.slider-next, .slider-prev {
+    border: 0px;
+    background: transparent;
+}
+.slider-next h1, .slider-prev h1 {
+    font-size: 48px;
+    color: white;
+}
+.slider-next h1:hover, .slider-prev h1:hover {
+    color: rgb(167, 167, 167);
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+}
+.Text {
+    font-family: Cambria;
+    font-size: 15pt;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+/* Подвал */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 15vh;
+}
+.footer-blocks {
+    margin-left: 7%;
+}
+.footer-blocks-text {
+    color: #8685EF;
+}
+

@@ -1,0 +1,155 @@
+html {
+    overflow-x: hidden;
+}
+h1 {
+    font-family: Cambria; 
+}
+h2 {
+    font-family: Cambria;
+}
+h3 {
+    font-family: Cambria;
+}
+h4 {
+    font-family: Cambria;
+    color: grey;
+}
+h5 {
+    font-family: Cambria;
+}
+.flexdisplay {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+/* Верхнее меню */
+.header {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+.header-logo {
+    width: 50%;
+    height: 90%;
+    margin-left: 20%;
+}
+.header-menu {
+    width: 80%;
+    margin-left: 20%;
+    margin-top: 2%;
+    position: absolute;
+}
+.header-menu-links {
+    font-family: Cambria;
+    margin-left: 4%;
+    font-size: 120%;
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+.header-menu-links::after { 
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 10%;
+    width: 0;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+.header-menu-links:hover::after { 
+    width: 100%; 
+    left: 0; 
+}
+/* Бургер-меню */
+#burger, [for=burger] {
+    display: none;
+}
+@media screen and (max-width: 1300px) {
+    .header-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        margin-top: 30px;
+        background: #E6E7E7;
+        opacity: 0.8;
+        width: 80%;
+        user-select: none;
+    }       
+    [for=burger] {
+        display: block;
+        position: fixed;
+        width: 10vw;
+        text-align: center;
+        right: 20px;
+        top: 10px;
+    }
+    [for=burger]::before {
+        content: '☰';
+        font-size: 20pt;
+    }
+    .header-menu-links {
+        display: flex;
+        flex-direction: column;
+        font-size: 20pt;
+    }
+    #burger:checked + label + nav{
+        display: block;
+    }
+    .header-menu-links::after { 
+        background: none;
+    }
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+    color: #8685EF;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 15px;
+    background-color: white;
+    border-radius: 50%;
+}
+.resultbutton {
+    background-color: rgba(32, 32, 32, 0.267);
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Text {
+    font-family: 'Gotham';
+    font-size: 15pt;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+#res {
+    margin-top: 3%;
+    font-size: 15pt;
+}
+/* Линия */
+.line {
+    margin-top: 1.5%;
+    width: 80%;
+    height: 0.5vh;
+    margin-left: 10%;
+    border-top: 1px solid white;
+}
+/* Подвал */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 15vh;
+}
+.footer-blocks {
+    margin-left: 7%;
+}
+.footer-blocks-text {
+    color: #8685EF;
+}
